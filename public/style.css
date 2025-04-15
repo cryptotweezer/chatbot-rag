@@ -115,3 +115,40 @@ html, body {
 .input-container button:nth-child(3):hover {
     background-color: #d32f2f;
 }
+/* ===== Responsive: Pantallas pequeñas ===== */
+@media (max-width: 768px) {
+    .chat-container {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  
+    .message {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    #user-input {
+      width: 100%;
+      font-size: 16px;
+    }
+  
+    .message p {
+      word-break: break-word;
+    }
+  
+    .chatbot, .user {
+      max-width: 100%;
+    }
+  
+    button {
+      width: 48%;
+      margin: 4px 1%;
+    }
+  
+    .logo img {
+      max-width: 80%;
+      height: auto;
+    }
+  }
+  
