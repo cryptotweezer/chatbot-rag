@@ -43,6 +43,8 @@ app.post('/askDocs', async (req, res) => {
     }
 
     try {
+        console.log('📂 Procesando documentos...');
+
         const vectorStore = await embedAllDocuments();
         const resultsWithScore = await vectorStore.similaritySearchWithScore(userMessage, 10);
 
@@ -102,7 +104,7 @@ app.post('/askDocs', async (req, res) => {
         res.json({ chatbotResponse: response.content });
 
     } catch (err) {
-        console.error('Error al responder con documentos:', err);
+        console.error('❌ Error al responder con documentos:', err);
         res.status(500).json({ chatbotResponse: '❌ Error procesando la pregunta con documentos.' });
     }
 });
